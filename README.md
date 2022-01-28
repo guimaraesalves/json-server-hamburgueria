@@ -1,14 +1,15 @@
 <h1 align="center">
-  Kenzie Burguer-API
+  json-server-hamburgueria
 </h1>
 
+
+
 <p align = "center">
-Este é o backend da aplicação Kenzie Burguer-API.
+Este é o backend da json-server-hamburgueria.
 </p>
 
-<p align="center">
-  <a href="#endpoints">Endpoints</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+
+
 
 ## **Endpoints**
 
@@ -20,7 +21,7 @@ Este é o backend da aplicação Kenzie Burguer-API.
 
 ```json
 {
-  "email": "joao.silva@mail.com",
+  "email": "mateus@mail.com",
   "password": "123456"
 }
 ```
@@ -29,10 +30,10 @@ Este é o backend da aplicação Kenzie Burguer-API.
 
 ```json
 {
-  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW8uc2lsdmFAbWFpbC5jb20iLCJpYXQiOjE2MzY1Mzg4MDAsImV4cCI6MTYzNjU0MjQwMCwic3ViIjoiMSJ9.TU5DIB-qKkZgqleRKAiqvze3MssflsAaBKBB6-6jAgg",
+  "accessToken": "qKkZgqleRKAiqvze3MssflsAaBKBB6.eyJlbWFpbCI6ImpvYW8uc2lsdmFAbWFpbC5jb20iLCJpYXQiOjE2MqKkZgqleRKAiqvze3MssflsAaBKBB6QwMCwic3ViIjoiMSJ9.TU5DIB-qKkZgqleRKAiqvze3MssflsAaBKBB6-6jAgg",
   "user": {
-    "email": "joao.silva@mail.com",
-    "name": "João da Silva",
+    "email": "mateus@mail.com",
+    "name": "mateus alves",
     "role": "administrador",
     "id": 1
   }
@@ -45,9 +46,9 @@ Este é o backend da aplicação Kenzie Burguer-API.
 
 ```json
 {
-  "email": "paulo.fontes@mail.com",
+  "email": "jorge@mail.com",
   "password": "123456",
-  "name": "Paulo Fontes",
+  "name": "jorge guerreiro",
   "role": "usuario"
 }
 ```
@@ -58,10 +59,10 @@ Este é o backend da aplicação Kenzie Burguer-API.
 {
   "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmZvbnRlc0BtYWlsLmNvbSIsImlhdCI6MTYzNjUzOTAxNywiZXhwIjoxNjM2NTQyNjE3LCJzdWIiOiI0In0.GdiQ0TlmvptXKz9yVSyJK--AJkVoHz2Z8qA-cU9aPbo",
   "user": {
-    "email": "paulo.fontes@mail.com",
-    "name": "Paulo Fontes",
+    "email": "jorge@mail.com",
+    "name": "jorge guerreiro",
     "role": "usuario",
-    "id": 4
+    "id": 2
   }
 }
 ```
@@ -73,105 +74,61 @@ Este é o backend da aplicação Kenzie Burguer-API.
 ```json
 [
   {
-    "title": "X-Salada",
-    "category": "hamburgueres",
-    "price": 8.9,
-    "userId": 1,
-    "id": 1
-  },
-  {
-    "title": "Pepsi",
-    "category": "bebidas",
-    "price": 4.9,
-    "userId": 1,
-    "id": 2
-  },
-  {
-    "title": "Batatas fritas",
-    "category": "acompanhamentos",
-    "price": 5.9,
-    "userId": 1,
-    "id": 3
-  },
-  {
-    "title": "Sorvete Oreo",
-    "category": "sobremesas",
-    "price": 8.9,
-    "userId": 1,
-    "id": 4
-  }
-]
-```
-
-<h2 align ='center'> Cadastrar produto </h2>
-
-`POST /products - FORMATO DA REQUISIÇÃO`
-
-```json
-{
-  "title": "X-Maionese",
-  "category": "hamburgueres",
-  "price": 9.9,
-  "userId": 1
-}
-```
-
-`POST /products - FORMATO DA RESPOSTA - STATUS 201`
-
-```json
-{
-  "title": "X-Maionese",
-  "category": "hamburgueres",
-  "price": 9.9,
-  "userId": 1,
-  "id": 9
-}
-```
-
-<h2 align ='center'> Pegar lista de carrinhos </h2>
-
-`GET /carts - FORMATO DA RESPOSTA - STATUS 200`
-
-```json
-[
-  {
-    "userId": 2,
-    "products": [
-      {
-        "title": "X-Maionese",
-        "category": "hamburgueres",
-        "price": 9.9,
-        "userId": 1,
-        "id": 9
-      },
-      {
-        "title": "Pepsi",
-        "category": "bebidas",
-        "price": 4.9,
-        "userId": 1,
-        "id": 2
-      }
-    ],
-    "id": 1
-  }
-]
-```
-
-<h2 align ='center'> Cadastrar carrinho </h2>
-
-`POST /carts - FORMATO DA REQUISIÇÃO`
-
-```json
-{
-  "userId": 1,
-  "products": [
+      "image": "https://lh3.googleusercontent.com/pw/AM-JKLVzsMug4UtoDzPlo-kCV8xuZChu2NnL05EZUbAnQZn9pPIWflNblkj_j26ANTyzN8gtdEC9PBuGm96NP2eVXtCeuRDrT4HG7HZj5GvhUbCjBNGz9RyL0D2zT_lFis8u1lMw9P582mxFV80jtOKiG-bW=w158-h150-no?authuser=0",
+      "name": "Big Kenzie",
+      "category": "Sanduíches",
+      "price": 19.99,
+      "id": 1
+    },
     {
-      "title": "X-Maionese",
-      "category": "hamburgueres",
-      "price": 9.9,
+      "image": "https://lh3.googleusercontent.com/pw/AM-JKLWCvLcj48eToZuoLpJH6tI40XkZ6sEy70X0sn5xr2veJJio9AbS75a6Ll4jeixtwfuBtAsiRrB6hZxGC1y00Ru2SlUN9iUYwC618z5V4irkPYETn7G7P-EhCYOcHYO9P1pm917Vl6JPVzLvyPZ792sD=s162-no?authuser=0",
+      "name": "X-Burguer",
+      "category": "Sanduíches",
+      "price": 10.99,
+      "id": 2
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/pw/AM-JKLWF8mTqijbuKflKozJH2oGJoJZ17zNuXmAGyxM6PC89j42q8-fKZxNcB0kPwpj3jjk17_VIhFXoEjrQ8nlZULhycfdpANt_nYTn3cATg9iAr5YSIzzEViSrTceBbtokyRquqN-0c-Ud3_GmgoMsa2df=w177-h162-no?authuser=0",
+      "name": "X-Chicken",
+      "category": "Sanduíches",
+      "price": 14.99,
+      "id": 3
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/pw/AM-JKLX_z8CJ-gjv7Zq-Ncql8Z_jQ1CdJ0_BX_A2CF8vthQ5WfIGJtHXsbuPIJzxFsIpqQdXum__foayg48ey8URMdEzr7E0qNkcHi4vDcX7WE_pt7ktiS2anREaBff5GVpWRMXCOtK076XaAKBX0LwGva9L=w170-h150-no?authuser=0",
+      "name": "Combo Kenzie",
+      "category": "Sanduíches",
+      "price": 20.99,
+      "id": 4
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/pw/AM-JKLUQjqBgtLWQ-DFrfUU4k4ETdIDZiAjsNyWdLKkBH85fC9DxgWNgkDPxaKWSpZQ_XpQVhnAe5RuZqkpL08cJB-HGIurhorD8z5kSNrM1Hb_5a3IZbNrOR2mnEwC-WYo20w3weckbStxt3TO-EuK0zSrn=w247-h167-no?authuser=0",
+      "name": "Fanta Guaraná",
+      "category": "Bebidas",
+      "price": 5.99,
       "id": 5
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/pw/AM-JKLU-KdfLBqnfV-ZZzQzrX-7PpvwMqCZ0AG_6TebhiFCDlBRS8yV4j0YWGYjUUwg_fgVcrd9sFfzDtTB3h3029j_4yH4-4Jrylhns4Cap9ALT2aKBOej7s9q9Xd_YECuaaLfWfQlSFOfLRgqWvQaeiOiL=w247-h172-no?authuser=0",
+      "name": "Coca Cola",
+      "category": "Bebidas",
+      "price": 6.99,
+      "id": 6
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/pw/AM-JKLWF4LPVhA1pLUxp_FOL8wp5WaDXVjL5_JBHbuHLyiEx1XjzE5T8EJs5B0KoiXZPVdNn2gCwSjeaXH5T8O27cR7EWXivdoe1QQQymspuHyZCfyC6oJG8ZA9h6yhWr0Pr6TVf_X86K4kf37-wvgxpIWdN=w162-h144-no?authuser=0",
+      "name": "McShake Ovomaltine",
+      "category": "Sobremesas",
+      "price": 18,
+      "id": 7
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/pw/AM-JKLV8CReP_8yXBE5tBqOunyxws5O6zlRq3Mky8Pn8KUT2mdsrgM5q3U6Zu9dAV5DOghKVAXbZrjF4Sd9nXoYSXd-Eh2_2DTNlTmSBhbf7k-rcOL7s9phSpPpCpQNIsakosg9WvxsfHMh6WeXLN-_Pyt63=s140-no?authuser=0",
+      "name": "Sundae Chocolate",
+      "category": "Sobremesas",
+      "price": 12.99,
+      "id": 8
     }
-  ]
 }
 ```
 
@@ -182,13 +139,13 @@ Este é o backend da aplicação Kenzie Burguer-API.
   "userId": 1,
   "products": [
     {
-      "title": "X-Maionese",
-      "category": "hamburgueres",
-      "price": 9.9,
-      "id": 5
+      "title": "Big Kenzie",
+      "category": "sanduiches",
+      "price": 91.9,
+      "id": 1
     }
   ],
-  "id": 5
+  "id": 1
 }
 ```
 
